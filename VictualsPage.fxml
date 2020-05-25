@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="722.0" prefWidth="1200.0" style="-fx-background-color: #efefef;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.VictualsPageController">
+   <children>
+      <AnchorPane prefHeight="43.0" prefWidth="1200.0" style="-fx-background-color: #131130;">
+         <children>
+            <Label layoutX="1023.0" layoutY="8.0" text="Choose Snacks" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Medium" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox alignment="TOP_CENTER" layoutY="43.0" prefHeight="679.0" prefWidth="292.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <HBox alignment="CENTER" prefHeight="49.0" prefWidth="292.0">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/list.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="104.0" text="Menu">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </HBox>
+            <Label layoutX="10.0" layoutY="20.0" prefHeight="39.0" prefWidth="293.0" text="Show Me:">
+               <font>
+                  <Font name="Yu Gothic Medium" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <JFXButton alignment="CENTER" contentDisplay="TOP" onAction="#pressShowSnacks" prefHeight="113.0" prefWidth="272.0" ripplerFill="#b1b1b1" style="-fx-background-color: #efefef;" text="Snacks">
+               <font>
+                  <Font name="Yu Gothic Medium" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/popcorn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="20.0" layoutY="118.0" onAction="#pressShowDrinks" prefHeight="113.0" prefWidth="272.0" ripplerFill="#b1b1b1" style="-fx-background-color: #efefef;" text="Drinks">
+               <font>
+                  <Font name="Yu Gothic Medium" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/soft-drink.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </VBox>
+      <JFXButton fx:id="confirmButton" buttonType="RAISED" layoutX="954.0" layoutY="657.0" onAction="#pressConfirm" prefHeight="43.0" prefWidth="206.0" ripplerFill="#1ab841" style="-fx-background-color: #ADFF2F;" text="Confirm">
+         <font>
+            <Font name="Yu Gothic Medium" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/checked.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="addBasketButton" buttonType="RAISED" layoutX="643.0" layoutY="657.0" onAction="#pressAddToBasket" prefHeight="43.0" prefWidth="206.0" ripplerFill="RED" style="-fx-background-color: Yellow;" text="Add">
+         <font>
+            <Font name="Yu Gothic Medium" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="cancelButton" buttonType="RAISED" layoutX="330.0" layoutY="657.0" onAction="#pressCancel" prefHeight="43.0" prefWidth="206.0" ripplerFill="#1ab841" style="-fx-background-color: #ADFF2F;" text="Cancel">
+         <font>
+            <Font name="Yu Gothic Medium" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/close-button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ListView fx:id="victualListView" layoutX="330.0" layoutY="70.0" prefHeight="560.0" prefWidth="832.0" style="-fx-background-color: transparent;" stylesheets="@CssFiles/ListStyling.css" />
+   </children>
+</AnchorPane>

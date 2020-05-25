@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="855.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginPageController">
+   <children>
+      <ImageView fitHeight="571.0" fitWidth="743.0" layoutX="428.0" layoutY="-41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/MovieTime.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="187.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/user.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="nameTF" focusColor="#131130" layoutX="54.0" layoutY="109.0" maxWidth="376.0" minWidth="310.0" prefHeight="37.0" prefWidth="310.0" promptText="Name">
+         <font>
+            <Font name="Yu Gothic Medium" size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="startButton" buttonType="RAISED" layoutX="222.0" layoutY="369.0" onAction="#loginButtonPressed" prefHeight="56.0" prefWidth="142.0" ripplerFill="#219700" style="-fx-background-color: #822e2e;" text="Log In" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="surnameTF" focusColor="#131130" layoutX="54.0" layoutY="178.0" maxWidth="376.0" minWidth="310.0" prefHeight="37.0" prefWidth="310.0" promptText="Surname">
+         <font>
+            <Font name="Yu Gothic Medium" size="19.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="nameError" layoutX="54.0" layoutY="136.0" textFill="RED">
+         <font>
+            <Font name="Yu Gothic Medium" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="surnameError" layoutX="54.0" layoutY="205.0" textFill="RED">
+         <font>
+            <Font name="Yu Gothic Medium" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="registerButton" buttonType="RAISED" layoutX="52.0" layoutY="369.0" onAction="#registerButtonPressed" prefHeight="56.0" prefWidth="142.0" ripplerFill="#219700" style="-fx-background-color: #131130;" text="Register" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXPasswordField fx:id="passwordTF" focusColor="#131130" layoutX="54.0" layoutY="252.0" prefHeight="31.0" prefWidth="310.0" promptText="Password">
+         <font>
+            <Font name="Yu Gothic Medium" size="19.0" />
+         </font>
+      </JFXPasswordField>
+   </children>
+</AnchorPane>

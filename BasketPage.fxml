@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1154.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BasketPageController">
+   <children>
+      <VBox prefHeight="731.0" prefWidth="1154.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="1154.0" style="-fx-background-color: #edd1d5;">
+               <children>
+                  <Label fx:id="lblNumOfItems" prefHeight="26.0" prefWidth="378.0" text="You have 0 items in your basket">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ListView fx:id="listView" prefHeight="614.0" prefWidth="1154.0" style="-fx-background-color: transparent;" stylesheets="@CssFiles/BasketPageStyling.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ListView>
+            <HBox alignment="CENTER_LEFT" prefHeight="73.0" prefWidth="1154.0">
+               <children>
+                  <JFXButton fx:id="deleteItemButton" buttonType="RAISED" minWidth="179.0" onAction="#deleteButtonPressed" prefHeight="49.0" prefWidth="179.0" ripplerFill="RED" style="-fx-background-color: #ff7a7a;" text="Delete Item">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Yu Gothic Medium" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/credit-card.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <Label fx:id="lblTotalAmount" minWidth="250.0" prefHeight="31.0" prefWidth="250.0" text="Total Amount: £2.50">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="25.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#ff5151" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <HBox.margin>
+                        <Insets left="280.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXButton fx:id="cashButton" buttonType="RAISED" minWidth="189.0" onAction="#pressCashButton" prefHeight="49.0" prefWidth="189.0" ripplerFill="#3ec71a" style="-fx-background-color: yellow;" text="Pay by Cash">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/coinsSmaller.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="paymentButton" buttonType="RAISED" layoutX="890.0" layoutY="19.0" minWidth="189.0" onAction="#pressPaymentButton" prefHeight="49.0" prefWidth="189.0" ripplerFill="#3ec71a" style="-fx-background-color: #ADFF2F;" text="Pay by Card">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/credit-card.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

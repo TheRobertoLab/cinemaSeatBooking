@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="722.0" prefWidth="1200.0" style="-fx-background-color: #efefef;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChooseTicketsPageController">
+   <children>
+      <AnchorPane prefHeight="43.0" prefWidth="1200.0" style="-fx-background-color: #131130;">
+         <children>
+            <Label layoutX="40.0" layoutY="7.0" text="Choose Tickets" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Medium" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="451.0" layoutY="63.0" prefHeight="156.0" prefWidth="717.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow color="#9e9e9e" />
+         </effect>
+         <children>
+            <Label fx:id="lblFilmTitle" layoutX="14.0" layoutY="14.0" text="Aquamen">
+               <font>
+                  <Font name="Yu Gothic Medium" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStartTime" alignment="CENTER_RIGHT" layoutX="547.0" layoutY="38.0" prefHeight="81.0" prefWidth="150.0" text="18PM">
+               <font>
+                  <Font name="Yu Gothic UI Semilight" size="55.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#ff4444" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="lblAvailableSeats" layoutX="12.0" layoutY="90.0" text="Seats Available: 150">
+               <font>
+                  <Font name="Yu Gothic Medium" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTheatreTitle" layoutX="12.0" layoutY="115.0" text="Place: Bronte Lectures">
+               <font>
+                  <Font name="Yu Gothic Medium" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblWeekNumber" layoutX="505.0" layoutY="115.0" text="Week 1, Saturday">
+               <font>
+                  <Font name="Yu Gothic Medium" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="filmImage" fitHeight="634.0" fitWidth="408.0" layoutX="20.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/Aquaman.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="451.0" layoutY="250.0" prefHeight="366.0" prefWidth="717.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow color="#9e9e9e" height="18.27" radius="8.7325" width="18.66" />
+         </effect>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Normal Ticket">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="38.0" prefHeight="31.0" prefWidth="79.0" text="1x Adult">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="128.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblNormalTicketPrice" alignment="CENTER_RIGHT" layoutX="228.0" layoutY="40.0" prefHeight="31.0" prefWidth="74.0" text="£2.50">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="normalComboBox" onAction="#doSelectionNormal" prefHeight="50.0" prefWidth="178.0" promptText="0">
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #f4f4f4;">
+               <children>
+                  <Label text="Student Ticket">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="38.0" prefHeight="31.0" prefWidth="77.0" text="1x Adult">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="120.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblStudentTicketPrice" alignment="CENTER_RIGHT" layoutX="228.0" layoutY="40.0" prefHeight="31.0" prefWidth="74.0" text="£2.50">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="55.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="studentComboBox" onAction="#doSelectionStudent" prefHeight="50.0" prefWidth="178.0" promptText="0">
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Ticket For Two">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="38.0" prefHeight="31.0" prefWidth="90.0" text="2x Adults">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="105.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblTicketForTwoPrice" alignment="CENTER_RIGHT" layoutX="228.0" layoutY="40.0" prefHeight="31.0" prefWidth="74.0" text="£2.50">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="55.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="forTwoComboBox" onAction="#doSelectionTicketForTwo" prefHeight="50.0" prefWidth="178.0" promptText="0">
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #f4f4f4;">
+               <children>
+                  <Label text="Child Ticket">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="38.0" prefHeight="31.0" prefWidth="134.0" text="0-10 years old">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="92.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblChildTicketPrice" alignment="CENTER_RIGHT" layoutX="228.0" layoutY="40.0" prefHeight="31.0" prefWidth="74.0" text="£2.50">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="55.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="childComboBox" onAction="#doSelectionChild" prefHeight="50.0" prefWidth="178.0" promptText="0">
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="nextButton" buttonType="RAISED" layoutX="976.0" layoutY="651.0" onAction="#pressNextButton" prefHeight="43.0" prefWidth="192.0" ripplerFill="#e8e8e8" style="-fx-background-color: #ADFF2F;" text="Next">
+         <font>
+            <Font name="Yu Gothic Medium" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="cancelButton" buttonType="RAISED" layoutX="451.0" layoutY="651.0" onAction="#closeButtonPressed" prefHeight="43.0" prefWidth="192.0" ripplerFill="#e8e8e8" style="-fx-background-color: #ADFF2F;" text="Cancel">
+         <font>
+            <Font name="Yu Gothic Medium" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

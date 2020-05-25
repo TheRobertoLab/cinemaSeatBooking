@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="722.0" prefWidth="1200.0" style="-fx-background-color: #efefef;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChooseSeatsPageController">
+   <children>
+      <FlowPane fx:id="flowPane" alignment="TOP_CENTER" layoutX="349.0" layoutY="101.0" prefHeight="536.0" prefWidth="794.0" style="-fx-background-color: transparent;" />
+      <AnchorPane prefHeight="43.0" prefWidth="1200.0" style="-fx-background-color: #131130;">
+         <children>
+            <Label layoutX="1033.0" layoutY="8.0" text="Choose Seats " textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Medium" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="confirmButton" buttonType="RAISED" layoutX="937.0" layoutY="657.0" onAction="#confirmButtonPressed" prefHeight="43.0" prefWidth="206.0" style="-fx-background-color: #ADFF2F;" text="Confirm">
+         <font>
+            <Font name="Yu Gothic Medium" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <ripplerFill>
+            <LinearGradient endX="0.7330097087378641" endY="0.7038834951456311">
+               <stops>
+                  <Stop color="#02cce3" />
+                  <Stop color="#02cce3" offset="0.007246376811594203" />
+                  <Stop color="#2ce302" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill></JFXButton>
+      <VBox layoutY="43.0" prefHeight="679.0" prefWidth="292.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label fx:id="lblFilmTitle" alignment="CENTER" prefHeight="39.0" prefWidth="293.0" text="Avatar">
+               <font>
+                  <Font name="Yu Gothic Medium" size="27.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblTheatreTitle" alignment="CENTER" layoutX="10.0" layoutY="20.0" prefHeight="22.0" prefWidth="292.0" text="Theatre Title">
+               <font>
+                  <Font name="Yu Gothic Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAvailableSeats" alignment="CENTER" prefHeight="25.0" prefWidth="295.0" text="Available Seats: 150">
+               <font>
+                  <Font name="Yu Gothic Medium" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblShouldToChooseNumber" alignment="CENTER" prefHeight="25.0" prefWidth="297.0" text="You Should Choose 10 seats">
+               <font>
+                  <Font name="Yu Gothic Medium" size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="99.0" prefHeight="50.0" prefWidth="281.0" spacing="20.0">
+               <children>
+                  <ToggleButton mnemonicParsing="false" prefHeight="49.0" prefWidth="49.0" style="-fx-background-color: red;" text="0" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <Label text="- Unavailable Seat">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="149.0" prefHeight="50.0" prefWidth="281.0" spacing="20.0">
+               <children>
+                  <ToggleButton fx:id="exampleButtonSeat" mnemonicParsing="false" prefHeight="49.0" prefWidth="49.0" text="0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <Label text="- Chosen Seat">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="281.0" spacing="20.0">
+               <children>
+                  <ToggleButton mnemonicParsing="false" prefHeight="49.0" prefWidth="49.0" text="0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <Label fx:id="lblStandard" text="- Standard (+ 0.00)">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="199.0" prefHeight="50.0" prefWidth="281.0" spacing="20.0">
+               <children>
+                  <ToggleButton mnemonicParsing="false" prefHeight="49.0" prefWidth="49.0" style="-fx-border-color: #e8bb4a; -fx-border-width: 2;" text="0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <Label fx:id="lblVip" text="- V.I.P Seat (+5.00)">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="319.0" prefHeight="50.0" prefWidth="281.0" spacing="20.0">
+               <children>
+                  <ToggleButton mnemonicParsing="false" prefHeight="49.0" prefWidth="49.0" style="-fx-border-color: #7ed13e; -fx-border-width: 2;" text="0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <Label fx:id="lblLarge" text="- Large Seat (+2.50)">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="349.0" layoutY="62.0" prefHeight="39.0" prefWidth="794.0">
+         <children>
+            <Line endX="100.0" startX="-100.0" strokeWidth="2.0" />
+            <Label alignment="BOTTOM_CENTER" prefHeight="22.0" prefWidth="138.0" text="SCREEN">
+               <font>
+                  <Font name="Yu Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" startX="-100.0" strokeWidth="2.0" />
+         </children>
+      </HBox>
+      <JFXButton fx:id="cancelButton" buttonType="RAISED" layoutX="349.0" layoutY="657.0" onAction="#cancelPressed" prefHeight="43.0" prefWidth="206.0" style="-fx-background-color: yellow;" text="Cancel">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Yu Gothic Medium" size="20.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient endX="0.7330097087378641" endY="0.7038834951456311">
+               <stops>
+                  <Stop color="#02cce3" />
+                  <Stop color="#02cce3" offset="0.007246376811594203" />
+                  <Stop color="#2ce302" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <AnchorPane layoutY="41.0" prefHeight="390.0" prefWidth="292.0" />
+   </children>
+</AnchorPane>

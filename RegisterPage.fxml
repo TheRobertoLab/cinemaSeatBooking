@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="582.0" prefWidth="493.0" style="-fx-background-color: #131130;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterPageController">
+   <children>
+      <AnchorPane layoutY="48.0" prefHeight="534.0" prefWidth="493.0" style="-fx-background-color: white;">
+         <children>
+            <JFXButton fx:id="registerButton" layoutX="55.0" layoutY="450.0" mnemonicParsing="false" onAction="#registerButtonPressed" prefHeight="51.0" prefWidth="371.0" style="-fx-background-color: #131130;" text="Register" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Medium" size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <VBox layoutX="98.0" layoutY="82.0" prefHeight="320.0" prefWidth="297.0" spacing="5.0">
+               <children>
+                  <JFXTextField fx:id="enterNameTF" focusColor="#131130" onKeyReleased="#handleReleasedKey" prefHeight="31.0" prefWidth="265.0" promptText="Enter a Name">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="19.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label fx:id="lblNameError" textFill="RED">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="surnameTF" focusColor="#131130" onKeyReleased="#handleReleasedKey" prefHeight="31.0" prefWidth="265.0" promptText="Enter a Surname">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="19.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label fx:id="lblErrorSurname" textFill="RED">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker fx:id="dateOfBirthPicker" defaultColor="#131130" editable="false" prefHeight="31.0" prefWidth="297.0" promptText="Select Date Of Birth" />
+                  <JFXPasswordField fx:id="passwordFieldOne" focusColor="#131130" prefHeight="31.0" prefWidth="269.0" promptText="Create a Password">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="passwordFieldTwo" focusColor="#131130" prefHeight="31.0" prefWidth="269.0" promptText="Repeat a Password">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+               </children>
+            </VBox>
+            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="51.0" layoutY="88.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/profile.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="51.0" layoutY="152.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/profile.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="51.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/stork.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="51.0" layoutY="278.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/key.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="51.0" layoutY="333.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/key.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="230.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/register.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="174.0" layoutY="14.0" text="REGISTRATION" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Medium" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

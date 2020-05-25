@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="731.0" prefWidth="1154.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyPurchasesPageController">
+   <children>
+      <VBox prefHeight="731.0" prefWidth="1154.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="200.0" style="-fx-background-color: #c8c7d6;">
+               <children>
+                  <Label fx:id="lblTopInfo" prefHeight="26.0" prefWidth="310.0" text="You have no purchases" textFill="#545454">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ListView fx:id="purchasesListView" prefHeight="600.0" prefWidth="1154.0" style="-fx-background-color: transparent;" stylesheets="@CssFiles/SummaryListStyling.css" />
+            <HBox alignment="CENTER_LEFT" prefHeight="73.0" prefWidth="1154.0" style="-fx-background-color: transparent;">
+               <children>
+                  <JFXButton fx:id="deleteItemButton" layoutX="932.0" layoutY="22.0" onAction="#deleteButtonPressed" prefHeight="50.0" prefWidth="239.0" style="-fx-background-color: #ff7a7a;" text="Delete an Item">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/filter.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="clearButton" onAction="#clearButtonPressed" prefHeight="50.0" prefWidth="222.0" style="-fx-background-color: #ff7a7a;" text="Clear">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="690.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/close-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>
